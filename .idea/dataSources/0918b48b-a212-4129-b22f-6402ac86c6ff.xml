@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost [2]">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.48">
+    <root id="1">
+      <DefaultCasing>mixed/mixed</DefaultCasing>
+      <ServerVersion>8.0.33</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="Teacher"/>
+    <schema id="3" parent="1" name="bt_sql_co_ban"/>
+    <schema id="4" parent="1" name="case_module3"/>
+    <schema id="5" parent="1" name="demo"/>
+    <schema id="6" parent="1" name="demo_sp"/>
+    <schema id="7" parent="1" name="employee_manage"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="lover"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="product_management"/>
+    <schema id="13" parent="1" name="production"/>
+    <schema id="14" parent="1" name="quan_ly_cho_thue_xe"/>
+    <schema id="15" parent="1" name="quan_ly_cua_hang"/>
+    <schema id="16" parent="1" name="quan_ly_don_dat_hang"/>
+    <schema id="17" parent="1" name="quan_ly_hoc_sinh"/>
+    <schema id="18" parent="1" name="quan_ly_khach_hang"/>
+    <schema id="19" parent="1" name="quan_ly_trung_tam_code_gym"/>
+    <schema id="20" parent="1" name="student_manage"/>
+    <schema id="21" parent="1" name="sys"/>
+    <schema id="22" parent="1" name="test_demo"/>
+  </database-model>
+</dataSource>

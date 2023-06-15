@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DashBoard</title>
+</head>
+<body>
+<div th:replace="/layout::title"></div>
+<div class="flexbox">
+<a th:href="@{/products/create}">Add new products</a>
+<p th:if="${products.isEmpty()}">Product not exists!!!</p>
+    <div class="search">
+        <form th:action="@{/products/search}" method="post">
+            <input type="text" placeholder="Search" name="searchName" required>
+            <button>
+                <a class="sbutton" type="submit">Search</a>
+            </button>
+        </form>
+    </div>
+</div>
+<table style="width: 100%" th:if="${!products.isEmpty()}" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Image</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="p, ps : ${products}">
+        <td th:text="${ps.count}"></td>
+        <td th:text="${p.getName()}"></td>
+        <td th:text="${p.getPrice()}"></td>
+        <td th:text="${p.getQuantity()}"></td>
+        <td><img th:src="${p.getImage()}" src="" alt=""
+                 style="width: 150px; height: 150px"></td>
+        <td>
+            <button>
+                <a th:href="@{/products/update/{id}(id = ${p.getId()})}">Update</a>
+            </button>
+        </td>
+        <td>
+            <button>
+                <a th:href="@{/products/delete/__${p.getId()}__}">Delete</a>
+            </button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

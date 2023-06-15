@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    *{
+        text-align: center;
+    }
+    .blinking-text {
+      animation: blink 1s infinite;
+    }
+  </style>
+</head>
+<body>
+<div th:fragment="title">
+  <h1 class="blinking-text" style="color: red ">Product List</h1>
+    <p>Welcome to phone of world</p>
+</div>
+
+</body>
+</html>
